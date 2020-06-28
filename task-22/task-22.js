@@ -16,11 +16,13 @@ function Promise_all(promises) {
 Promise_all([]).then(array => {
     console.log("This should be []:", array);
 });
+
 function soon(val) {
     return new Promise(resolve => {
         setTimeout(() => resolve(val), Math.random() * 500);
     });
 }
+
 Promise_all([soon(1), soon(2), soon(3)]).then(array => {
     console.log("This should be [1, 2, 3]:", array);
 });
