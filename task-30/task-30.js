@@ -13,6 +13,7 @@ function Promise_all(promises) {
     });
 }
 
+
 Promise_all([]).then(array => {
     console.log("This should be []:", array);
 });
