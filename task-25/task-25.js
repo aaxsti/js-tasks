@@ -1,5 +1,5 @@
-let cat = document.querySelector("#cat");
-let hat = document.querySelector("#hat");
+let cat = document.getElementById("cat");
+let hat = document.getElementById("hat");
 
 let angle = 0;
 let lastTime = null;
