@@ -1,11 +1,5 @@
 const {statSync, readdirSync, readFileSync} = require("fs");
 
-let searchTerm = new RegExp(process.argv[2]);
-
-for (let arg of process.argv.slice(3)) {
-    search(arg);
-}
-
 function search(file) {
     let stats = statSync(file);
     if (stats.isDirectory()) {
@@ -15,4 +9,10 @@ function search(file) {
     } else if (searchTerm.test(readFileSync(file, "utf8"))) {
         console.log(file);
     }
+}
+
+let searchTerm = new RegExp(process.argv[2]);
+
+for (let arg of process.argv.slice(3)) {
+    search(arg);
 }

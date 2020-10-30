@@ -11,5 +11,5 @@ methods.MKCOL = async function(request) {
         return {status: 204};
     }
     if (stats.isDirectory()) return {status: 204};
-    else return {status: 400, body: "Not a directory"};
+    else return {status: 400, body: "It`s not a directory!"};
 };
